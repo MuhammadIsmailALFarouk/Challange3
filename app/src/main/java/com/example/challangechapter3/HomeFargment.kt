@@ -19,7 +19,7 @@ class HomeFargment : Fragment() {
     private lateinit var recycleview: RecyclerView
     private lateinit var listMenu: ArrayList<ModalData>
     private lateinit var myAdapter: MyAdapter
-//    private lateinit var changeList:ImageButton
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,7 +28,6 @@ class HomeFargment : Fragment() {
         // Inflate the layout for this fragment
         val view: View = inflater.inflate(R.layout.fragment_home_fargment, container, false)
         return view;
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -88,12 +87,6 @@ class HomeFargment : Fragment() {
             )
 
         val adapter = MyAdapter(listMenu)
-
-        //       changeList.findViewById<ImageButton>(R.id.changelist)
-
-//        changeList.setOnClickListener{
-//            if(isGr)
-//        }
         val linearLayoutManager = LinearLayoutManager(context)
         recycleview = view.findViewById(R.id.recycleview)
         recycleview.layoutManager = linearLayoutManager
